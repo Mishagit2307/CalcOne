@@ -1,5 +1,6 @@
 package info.misha.calcone;
 
+import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,9 +21,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        resultField =(TextView) findViewById(R.id.resultField);
-        numberField = (EditText) findViewById(R.id.numberField);
-        operationField = (TextView) findViewById(R.id.operationField);
+        resultField = findViewById(R.id.resultField);
+        numberField =  findViewById(R.id.numberField);
+        operationField =  findViewById(R.id.operationField);
     }
 
     @Override
@@ -33,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         super.onSaveInstanceState(outState);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
@@ -50,6 +52,19 @@ public class MainActivity extends AppCompatActivity {
         if(lastOperation.equals("=") && operand!=null){
             operand = null;
         }
+    }
+
+    public void onClearClick(View view) {
+        this.lastOperation = "";
+        this.operand = null;
+
+        resultField = findViewById(R.id.resultField);
+        numberField =  findViewById(R.id.numberField);
+        operationField =  findViewById(R.id.operationField);
+
+        resultField.setText("");
+        numberField.setText("");
+        operationField.setText("");
     }
 
     public void onOperationClick(View view){
@@ -70,8 +85,10 @@ public class MainActivity extends AppCompatActivity {
         operationField.setText(lastOperation);
     }
 
+    @SuppressLint("SetTextI18n")
     private void performOperation(Double number, String operation){
-        
+        boolean divideByZero = false;
+
         if(operand ==null){
             operand = number;
         }
@@ -86,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
                 case "/":
                     if(number==0){
                         operand =0.0;
+                        divideByZero = true;
                     }
                     else{
                         operand /=number;
@@ -102,7 +120,12 @@ public class MainActivity extends AppCompatActivity {
                     break;
             }
         }
-        resultField.setText(operand.toString().replace('.', ','));
+
+        if (divideByZero) {
+            resultField.setText("ERROR: Divide by zero");
+        } else {
+            resultField.setText(operand.toString().replace('.', ','));
+        }
         numberField.setText("");
     }
 }

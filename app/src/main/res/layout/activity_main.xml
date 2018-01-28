@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp"
+    android:padding="5dp"
     tools:context="info.misha.calcone.MainActivity">
+
     <LinearLayout
         android:id="@+id/result"
         android:layout_width="match_parent"
@@ -15,133 +17,218 @@
         <TextView
             android:id="@+id/resultField"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:textSize="18sp"
-            android:layout_height="wrap_content" />
+            android:textSize="15sp" />
+
         <TextView
             android:id="@+id/operationField"
             android:layout_width="0dp"
-            android:layout_weight="1"
-            android:textSize="18sp"
             android:layout_height="wrap_content"
-            />
+            android:layout_weight="1"
+            android:textSize="15sp" />
     </LinearLayout>
+
     <EditText
         android:id="@+id/numberField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="phone" />
+        android:inputType="phone"
+        android:textSize="15sp"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="4dp">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="7"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
+            android:text="@string/_7"
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="8"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
+            android:text="@string/_8"
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle"/>
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="9"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
+            android:text="@string/_9"
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:onClick="onOperationClick"
             android:text="/"
-            android:onClick="onOperationClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="4"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
+            android:text="@string/_4"
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
             android:text="5"
-            android:onClick="onNumberClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="6"
-            android:onClick="onNumberClick"/>
-        <Button
             android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
+            android:text="@string/_6"
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle" />
+
+        <Button
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:onClick="onOperationClick"
             android:text="*"
-            android:onClick="onOperationClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
             android:text="1"
-            android:onClick="onNumberClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
             android:text="2"
-            android:onClick="onNumberClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
             android:text="3"
-            android:onClick="onNumberClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_green_dark"
+            android:onClick="onOperationClick"
             android:text="-"
-            android:onClick="onOperationClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
             android:text="0"
-            android:onClick="onNumberClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:onClick="onNumberClick"
             android:text=","
-            android:onClick="onNumberClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_dark"
+            android:onClick="onOperationClick"
             android:text="+"
-            android:onClick="onOperationClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
         <Button
-            android:layout_weight="1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_red_light"
+            android:onClick="onClearClick"
+            android:text="C"
+            android:textColor="@android:color/white"
+            tools:ignore="ButtonStyle,HardcodedText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/holo_blue_light"
+            android:onClick="onOperationClick"
             android:text="="
-            android:onClick="onOperationClick"/>
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText" />
     </LinearLayout>
 </LinearLayout>
